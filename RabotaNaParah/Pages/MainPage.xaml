@@ -15,9 +15,10 @@
             <ListBoxItem x:Name="ListBoxItem2" Content="Зомби пицца 500солнышек (Мозге, подсолнух, зелёнка, стул, газонокосилка, горошек)"></ListBoxItem>
             <ListBoxItem x:Name="ListBoxItem3" Content="4 сира лям (Путин, Зеленский, Мадуро, Трамп)"></ListBoxItem>
             <ListBoxItem x:Name="ListBoxItem4" Content="Пицца Антонина 3дня (Панталоны, пенсия,сссыр )"></ListBoxItem>
-            <ListBoxItem x:Name="ListBoxItem5" Content="Пицца Уральские пельмени  (Андрей Рожков, Дмитрий Соколов, Дмитрий Брекоткин, Вячеслав Мясников, Максим Ярица, Александр Попов, Сергей Ершов, Илана Юрьева, Сергей Исаев, 5)"></ListBoxItem>
+            <ListBoxItem x:Name="ListBoxItem5" Content="Пицца Уральские пельмени 1000 (Андрей Рожков, Дмитрий Соколов, Дмитрий Брекоткин, Вячеслав Мясников, Максим Ярица, Александр Попов, Сергей Ершов, Илана Юрьева, Сергей Исаев, 5)"></ListBoxItem>
             <ListBoxItem x:Name="ListBoxItem6" Content="Пицца Mellstroy лямдвести (Сливы, виноград, яблоки на зелёных, арбузы, бананы, бабачай, кофебаба, бабпивка, чечевиный суп из семи залуп, салатик бурмалдатик, картошка фри, щавель, персик, шляпа)"></ListBoxItem>
         </ListBox>
+        <Label Content="Итого: 0" HorizontalAlignment="Center" x:Name="Sum"></Label>
         <Button x:Name="NextPageButton" Content ="Дальше" Width="50" VerticalAlignment="Bottom" IsEnabled="False" Click="NextPageButton_Click"/>
     </StackPanel>
 </Page>

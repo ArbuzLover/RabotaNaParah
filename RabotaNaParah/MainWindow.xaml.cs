@@ -28,7 +28,6 @@ namespace RabotaNaParah
         {
             if (MainFrame.CanGoBack) MainFrame.GoBack();
             else MessageBox.Show("ТЫ НА ПЕРВОЙ СТРАНИЦЕ, КУДА ДАЛЬШЕ???");
-
         }
     }
 }
