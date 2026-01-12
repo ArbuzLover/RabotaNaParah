@@ -13,22 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace RabotaNaParah
+namespace RabotaNaParah.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
+    /// Логика взаимодействия для OptionsPage.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class OptionsPage : Page
     {
-        public MainWindow()
+        public OptionsPage()
         {
             InitializeComponent();
-        }
-        private void BackButton_Click(object sender, RoutedEventArgs e)
-        {
-            if (MainFrame.CanGoBack) MainFrame.GoBack();
-            else MessageBox.Show("ТЫ НА ПЕРВОЙ СТРАНИЦЕ, КУДА ДАЛЬШЕ???");
-
         }
     }
 }

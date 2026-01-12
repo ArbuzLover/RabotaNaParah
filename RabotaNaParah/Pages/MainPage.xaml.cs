@@ -13,22 +13,25 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace RabotaNaParah
+namespace RabotaNaParah.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
+    /// Логика взаимодействия для MainPage.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class MainPage : Page
     {
-        public MainWindow()
+        public MainPage()
         {
             InitializeComponent();
         }
-        private void BackButton_Click(object sender, RoutedEventArgs e)
+        private void ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            if (MainFrame.CanGoBack) MainFrame.GoBack();
-            else MessageBox.Show("ТЫ НА ПЕРВОЙ СТРАНИЦЕ, КУДА ДАЛЬШЕ???");
+            NextPageButton.IsEnabled = true;
+        }
 
+        private void NextPageButton_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new OptionsPage());
         }
     }
 }

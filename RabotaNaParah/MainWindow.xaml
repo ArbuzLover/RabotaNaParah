@@ -5,8 +5,19 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RabotaNaParah"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+            Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="25*"/>
+            <ColumnDefinition Width="75*"/>
+        </Grid.ColumnDefinitions>
+        <Button Content="Назад" x:Name="BackButton" Click="BackButton_Click"/>
+        <Label Content="Пицца у Гордова" Grid.Column="1" HorizontalAlignment="Center"/>
+        <Frame Grid.Row="1" x:Name="MainFrame" Source="Pages/MainPage.xaml" Grid.ColumnSpan="2" NavigationUIVisibility="Hidden"/>
+
     </Grid>
 </Window>

@@ -13,22 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace RabotaNaParah
+namespace RabotaNaParah.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
+    /// Логика взаимодействия для ConfirmPage.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class ConfirmPage : Page
     {
-        public MainWindow()
+        public ConfirmPage()
         {
             InitializeComponent();
-        }
-        private void BackButton_Click(object sender, RoutedEventArgs e)
-        {
-            if (MainFrame.CanGoBack) MainFrame.GoBack();
-            else MessageBox.Show("ТЫ НА ПЕРВОЙ СТРАНИЦЕ, КУДА ДАЛЬШЕ???");
-
         }
     }
 }
