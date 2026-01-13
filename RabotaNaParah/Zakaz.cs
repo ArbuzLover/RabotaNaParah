@@ -8,7 +8,7 @@ namespace RabotaNaParah
 {
     public  static class Zakaz
     {
-        public static int sum = 0;
+        public static double sum = 0;
          
 
     }

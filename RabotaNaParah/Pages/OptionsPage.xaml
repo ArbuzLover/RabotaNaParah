@@ -6,9 +6,48 @@
       xmlns:local="clr-namespace:RabotaNaParah.Pages"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="OptionsPage">
+      Title="OptionsPage" Background="#FFB6DCEF">
 
-    <Grid>
+    <StackPanel HorizontalAlignment="Center">
+
         
-    </Grid>
+
+           
+                <TextBlock Text="Выберите размер:"  FontWeight="Bold" HorizontalAlignment="Center"/>
+
+        <RadioButton x:Name="MinSize" GroupName="SizeGroup" Margin="5" Content="Маленькая" Checked="MinSize_Checked"/>
+
+
+
+        <RadioButton x:Name="AverageSize" GroupName="SizeGroup" Margin="5" Content="Средняя" Checked="AverageSize_Checked"/>
+
+
+
+        <RadioButton x:Name="MaxSize" GroupName="SizeGroup" Margin="5" Content="Большая" Checked="MaxSize_Checked" />
+        
+
+
+        <StackPanel Orientation="Horizontal">
+            <ComboBox Background="#FFFFF0F5" Width="250" Height="60" Margin="10" SelectionChanged="ComboBox1_SelectionChanged" x:Name="ComboBox1">
+                <ComboBoxItem x:Name="ComboBoxItem1">сыр +50₽</ComboBoxItem>
+                <ComboBoxItem x:Name="ComboBoxItem2">бекон +80₽</ComboBoxItem>
+                <ComboBoxItem x:Name="ComboBoxItem3">грибы +40₽</ComboBoxItem>
+                <ComboBoxItem x:Name="ComboBoxItem4">мозге +1000₽</ComboBoxItem>
+            </ComboBox>
+
+            <Button Content="ВЫБРАЛ ЕТО"
+         x:Name="ButtonChoice"
+         Height="50"  Margin="10" Click="ButtonChoice_Click"
+         />
+        </StackPanel>
+
+
+        <Label x:Name="ChoiceLabel" Content="Вы выбрали: ничего "/>
+        <Label Margin="5" Content="Итого: "  FontWeight="Bold" x:Name="SumLabel"/>
+
+        <Button x:Name="ButtonNext" 
+         Content="Оформить"
+         Height="30" Width="100" Click="ButtonNext_Click"
+       />
+    </StackPanel>
 </Page>
