@@ -55,18 +55,21 @@ namespace RabotaNaParah.Pages
         {
             NewSum = Zakaz.sum;
             Zakaz.razmer = MinSize.Content.ToString();
+            SumLabel.Content = $"Итого: {DopOpt + NewSum} ";
         }
 
         private void AverageSize_Checked(object sender, RoutedEventArgs e)
         {
             NewSum = Zakaz.sum*1.2;
             Zakaz.razmer = AverageSize.Content.ToString();
+            SumLabel.Content = $"Итого: {DopOpt + NewSum} ";
         }
 
         private void MaxSize_Checked(object sender, RoutedEventArgs e)
         {
-            NewSum += Zakaz.sum*1.4;
+            NewSum = Zakaz.sum*1.4;
             Zakaz.razmer = MaxSize.Content.ToString();
+            SumLabel.Content = $"Итого: {DopOpt + NewSum} ";
         }
         private void ButtonNext_Click(object sender, RoutedEventArgs e)
         {
