@@ -29,14 +29,17 @@ namespace RabotaNaParah.Pages
             
             NextPageButton.IsEnabled = true;
             if((sender as ListBox).SelectedItem is  ListBoxItem choice)
-            {
+            {   
+                Zakaz.pizza = choice.Content.ToString();
                 if (choice == ListBoxItem1) Zakaz.sum = 4000;
                 else if (choice == ListBoxItem2) Zakaz.sum = 500;
                 else if (choice == ListBoxItem3) Zakaz.sum = 1000000;
                 else if (choice == ListBoxItem4) Zakaz.sum = 3;
                 else if (choice == ListBoxItem5) Zakaz.sum = 1000;
                 else if (choice == ListBoxItem6) Zakaz.sum = 1200000;
+                
             }
+            
             Sum.Content = $"Итого: {Zakaz.sum}";
         }
 

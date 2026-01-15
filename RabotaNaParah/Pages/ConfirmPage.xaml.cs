@@ -23,6 +23,9 @@ namespace RabotaNaParah.Pages
         public ConfirmPage()
         {
             InitializeComponent();
+            PizzaLabel.Content += Zakaz.pizza;
+            SizeLabel.Content += Zakaz.razmer;
+            DopLabel.Content += Zakaz.dop;
         }
     }
 }

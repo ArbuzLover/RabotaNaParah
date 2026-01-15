@@ -41,6 +41,7 @@ namespace RabotaNaParah.Pages
             else if (choice == ComboBoxItem3) DopOpt = 40;
             else if (choice == ComboBoxItem4) DopOpt = 1000;
             SumLabel.Content = $"Итого: {DopOpt+NewSum} ";
+            Zakaz.dop = choice.Content.ToString();
         }
 
         
@@ -48,16 +49,19 @@ namespace RabotaNaParah.Pages
         private void MinSize_Checked(object sender, RoutedEventArgs e)
         {
             NewSum = Zakaz.sum;
+            Zakaz.razmer = MinSize.Content.ToString();
         }
 
         private void AverageSize_Checked(object sender, RoutedEventArgs e)
         {
             NewSum = Zakaz.sum*1.2;
+            Zakaz.razmer = AverageSize.Content.ToString();
         }
 
         private void MaxSize_Checked(object sender, RoutedEventArgs e)
         {
             NewSum += Zakaz.sum*1.4;
+            Zakaz.razmer = MaxSize.Content.ToString();
         }
         private void ButtonNext_Click(object sender, RoutedEventArgs e)
         {
