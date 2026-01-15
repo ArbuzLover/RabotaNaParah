@@ -9,16 +9,18 @@
       Title="ConfirmPage" Background="#FFB6DCEF">
 
     <StackPanel HorizontalAlignment="Center">
-        <Label Content="Пицца, которую вы выбрали: " x:Name="PizzaLabel"/>
-        <Label Content="Размер, который вы выбрали: " x:Name="SizeLabel"/>
-        <Label Content="Добавка, которую вы выбрали: " x:Name="DopLabel"/>
-        <Label Content="Имя" Margin="0,10,0,0"/>
+        <TextBlock Text="Пицца, которую вы выбрали: " x:Name="PizzaLabel" Width="300" TextWrapping="Wrap"/>
+        <TextBlock Text="Размер, который вы выбрали: " x:Name="SizeLabel"/>
+        <TextBlock Text="Добавка, которую вы выбрали: " x:Name="DopLabel"/>
+        <TextBlock x:Name="SumTextBlock" Text="Итого: "/>
+        <TextBlock Text="Имя" Margin="0,10,0,0"/>
         <TextBox x:Name="NameTextBox"></TextBox>
         <ComboBox Margin="0,5,0,0" x:Name="SOComboBox">
-            <ComboBoxItem>При получении</ComboBoxItem>>
+            <ComboBoxItem>При получении</ComboBoxItem>
+            
             <ComboBoxItem>Картой</ComboBoxItem>
             <ComboBoxItem>СБП</ComboBoxItem>
         </ComboBox>
-        <Button Content="Заказать" Margin="0,10"></Button>
+        <Button Content="Подтвердить" Margin="0,10" Click="Button_Click"></Button>
     </StackPanel>
 </Page>

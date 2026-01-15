@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Xml.Serialization;
 
 namespace RabotaNaParah.Pages
 {
@@ -20,7 +21,7 @@ namespace RabotaNaParah.Pages
     /// </summary>
     public partial class OptionsPage : Page
     {
-        double NewSum,DopOpt;
+        double NewSum,DopOpt = 0;
         public OptionsPage()
         {
             InitializeComponent();
@@ -29,19 +30,23 @@ namespace RabotaNaParah.Pages
             MaxSize.Content = $"Большая: {Zakaz.sum *1.4}";
         }
         ComboBoxItem choice;
+        
         private void ComboBox1_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             choice = (sender as ComboBox).SelectedItem as ComboBoxItem;
         }
+        string dobavki;
         private void ButtonChoice_Click(object sender, RoutedEventArgs e)
         {
-            ChoiceLabel.Content = "Вы выбрали: " + choice.Content.ToString();
-            if (choice == ComboBoxItem1) DopOpt = 50;
-            else if (choice == ComboBoxItem2) DopOpt = 80;
-            else if (choice == ComboBoxItem3) DopOpt = 40;
-            else if (choice == ComboBoxItem4) DopOpt = 1000;
+            dobavki += choice.Content.ToString() + ", ";
+            ChoiceLabel.Content = "Вы выбрали: " + dobavki;
+            if (choice == ComboBoxItem1) DopOpt += 50;
+            else if (choice == ComboBoxItem2) DopOpt += 80;
+            else if (choice == ComboBoxItem3) DopOpt += 40;
+            else if (choice == ComboBoxItem4) DopOpt += 1000;
+            else if (choice == ComboBoxItem0) DopOpt += 0;
             SumLabel.Content = $"Итого: {DopOpt+NewSum} ";
-            Zakaz.dop = choice.Content.ToString();
+            Zakaz.dop = ChoiceLabel.Content.ToString();
         }
 
         

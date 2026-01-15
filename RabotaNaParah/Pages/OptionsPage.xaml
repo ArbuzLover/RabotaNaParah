@@ -29,6 +29,7 @@
 
         <StackPanel Orientation="Horizontal">
             <ComboBox Background="#FFFFF0F5" Width="250" Height="60" Margin="10" SelectionChanged="ComboBox1_SelectionChanged" x:Name="ComboBox1">
+                <ComboBoxItem x:Name="ComboBoxItem0">Ничего +0</ComboBoxItem>
                 <ComboBoxItem x:Name="ComboBoxItem1">сыр +50₽</ComboBoxItem>
                 <ComboBoxItem x:Name="ComboBoxItem2">бекон +80₽</ComboBoxItem>
                 <ComboBoxItem x:Name="ComboBoxItem3">грибы +40₽</ComboBoxItem>

@@ -23,9 +23,15 @@ namespace RabotaNaParah.Pages
         public ConfirmPage()
         {
             InitializeComponent();
-            PizzaLabel.Content += Zakaz.pizza;
-            SizeLabel.Content += Zakaz.razmer;
-            DopLabel.Content += Zakaz.dop;
+            PizzaLabel.Text += Zakaz.pizza;
+            SizeLabel.Text += Zakaz.razmer;
+            DopLabel.Text += Zakaz.dop;
+            SumTextBlock.Text += Zakaz.sum;
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Грациас за заказ!");
         }
     }
 }
