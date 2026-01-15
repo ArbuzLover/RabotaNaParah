@@ -31,7 +31,9 @@ namespace RabotaNaParah.Pages
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Грациас за заказ!");
+            if (NameTextBox.Text.Length == 0) MessageBox.Show("Введите имя!");
+            else
+                MessageBox.Show("Грациас за заказ!");
         }
     }
 }
